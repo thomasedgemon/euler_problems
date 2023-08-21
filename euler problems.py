@@ -16,4 +16,4 @@ while f_n2 < 4000000:
   #
   #
   #
-  
+  print(sum(fibonacci_even))
