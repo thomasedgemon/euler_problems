@@ -47,28 +47,27 @@ _________________________________________________
 #find the largest palindrome number made from the product of two 3 digit numbers.
 
 products = []
+palindromes = []
 #find all products. no need to store its divisors.
-for i in range(990, 999):
-  for j in range(990, 999):
+for i in range(900, 999):
+  for j in range(900, 999):
     if i * j in products:
       pass
     else:
       products.append(i * j )
-
-
-
-
-
-def even_or_odd():
+#test for palindromicitiy
+def palindromicity():
   for x in products:
-    if x % 2 == 0:
-      
-
-def even_palindromicity():
+    x = str(x)
+    if x[0] == x[-1]:
+      if x[1] == x[-2]:
+        if x[2] == x[-3]:
+          palindromes.append(x)
   
-    
-    
-def odd_palindromicity():
+palindromicity()
+palindromes.sort(reverse=True)
+print(palindromes[0])
+
 
 
 
