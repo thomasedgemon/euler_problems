@@ -67,7 +67,28 @@ def palindromicity():
 palindromicity()
 palindromes.sort(reverse=True)
 print(palindromes[0])
+__________________________
+#NOT COMPUTATIONALLY FEASIBLE, BUT WORKS
+#what is smallest number that is divisible by all numbers one through twenty?
 
+possibles = []
+divisors = [4,11,12,13,14,15,16,17,18,19,20,21]
+
+for x in range(1, 300000000):
+  potential = True
+  for i in divisors:
+    if x % i == 0:
+      potential &= True
+    else:
+      potential &= False
+  if potential and x not in possibles:
+      possibles.append(x)
+
+    
+
+      
+possibles.sort
+print(possibles)
 
 
 
