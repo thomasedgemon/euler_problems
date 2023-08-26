@@ -44,3 +44,35 @@ print(factors_of_n)
 print("prime factors are")
 print(prime_factors)
 _________________________________________________
+#find the largest palindrome number made from the product of two 3 digit numbers.
+
+products = []
+#find all products. no need to store its divisors.
+for i in range(990, 999):
+  for j in range(990, 999):
+    if i * j in products:
+      pass
+    else:
+      products.append(i * j )
+
+
+
+
+
+def even_or_odd():
+  for x in products:
+    if x % 2 == 0:
+      
+
+def even_palindromicity():
+  
+    
+    
+def odd_palindromicity():
+
+
+
+
+
+
+
