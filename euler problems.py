@@ -89,6 +89,27 @@ for x in range(1, 300000000):
       
 possibles.sort
 print(possibles)
+________________________________________________________
+#find the difference between the sum of the squares and the square of the sums of the first 100 natural numbers
+
+import math
+
+def sum_of_squares(n):
+    return (((n**2)+n)*((2*n)+1)) / 6
+    
+def square_of_sums(n):
+    sums_squared = 0
+    sum = 0
+    for i in range(1, n+1):   
+        sum = sum + i
+    
+    sums_squared = sum ** 2
+    return sums_squared
+
+a = square_of_sums(100)
+b = sum_of_squares(100)
+
+print(a-b)
 
 
 
