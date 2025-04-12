@@ -354,7 +354,50 @@ func main() {
 }
 ____________________________________________
 
+//golang
+//find the number less than one million wich has the longest collatz sequence
+package main
 
+import (
+	"fmt"
+)
+
+func isEven(n int) bool {
+	return n%2 == 0
+}
+
+// recursive function that returns the length of the sequence
+func collatzLength(n int) int {
+	if n == 1 {
+		return 1
+	}
+	if isEven(n) {
+		return 1 + collatzLength(n/2)
+	}
+	return 1 + collatzLength(3*n+1)
+}
+
+// define a struct to hold the start number and its sequence length
+type CollatzInfo struct {
+	start  int
+	length int
+}
+
+func main() {
+	var maxInfo CollatzInfo // zero value will be (0, 0)
+
+	for i := 1; i < 1000000; i++ {
+		length := collatzLength(i)
+		if length > maxInfo.length {
+			maxInfo = CollatzInfo{start: i, length: length}
+		}
+	}
+
+	fmt.Println("Starting number with the longest Collatz sequence:", maxInfo.start)
+	fmt.Println("Length of sequence:", maxInfo.length)
+}
+____________________________
+//golang
 
 
 
