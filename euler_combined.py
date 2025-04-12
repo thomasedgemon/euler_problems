@@ -188,3 +188,49 @@ for a in range(1,999):
         if a + b + c == 1000:
             product = a * b * c
             print(product)
+________________________________________________
+//this is written in golang
+//find the first triangular number with at least 500 divisors
+import "fmt"
+
+func triangle_number(n int) int {
+	sum := 0
+	for i := 1; i <= n; i++ {
+		sum += i
+	}
+	return sum
+}
+func main() {
+	var n int = 1
+
+	for {
+		answer := triangle_number(n)
+		num_divisors := 0
+
+		for i := 1; i <= answer; i++ {
+			if answer%i == 0 {
+				num_divisors += 1
+			}
+		}
+
+		if num_divisors >= 500 {
+			fmt.Printf("The first triangle number that has at least 500 divisors is %d\n", answer)
+			break
+		}
+
+		n += 1
+	}
+}
+___________________________________
+
+
+
+
+
+
+
+
+
+
+
+
