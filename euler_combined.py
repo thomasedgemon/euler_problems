@@ -397,7 +397,20 @@ func main() {
 	fmt.Println("Length of sequence:", maxInfo.length)
 }
 ____________________________
-//golang
+#find sum of all digits in 2^1000
+
+sum = 0 
+
+big_num = str(2 ** 1000)
+
+print(type(big_num[3]))
+
+
+for digit in big_num:
+    number = int(digit)
+    sum += number
+
+print(sum)
 
 
 
