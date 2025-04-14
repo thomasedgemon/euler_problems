@@ -411,6 +411,22 @@ for digit in big_num:
     sum += number
 
 print(sum)
+_________________________________
+#if all numbers one to one thousand were written in words,
+# how many letters would be used?
+
+from num2words import num2words
+
+
+sum = 0
+for n in range(1,1001):
+    word = (num2words(n))
+    word2 = word.replace("-","")
+    word3 = word2.replace(" ","")
+    length = len(word3)
+    sum += length
+
+print(sum)
 
 
 
